@@ -22,7 +22,7 @@ function Vhosts(opts, onChange) {
 Vhosts.prototype.config = function(opts) {
   return  ''
   +  'upstream ' + opts.name + ' {\n'
-  + '  server 127.0.0.1:' + opts.port + ';\n'
+  + '  server ' + opts.address + ':' + opts.port + ';\n'
   + '}\n'
   + 'server {\n'
   + '  listen 80;\n'
